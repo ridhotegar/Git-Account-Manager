@@ -102,7 +102,6 @@ git-account-manager/
 │   ├── stores/                 # Zustand state
 │   ├── lib/                    # Tauri API wrapper + utilities
 │   ├── types/                  # TypeScript definitions
-│   └── components/ui/          # Reusable UI primitives
 ├── src-tauri/                  # Backend (Rust)
 │   ├── src/
 │   │   ├── commands/           # Tauri command handlers
