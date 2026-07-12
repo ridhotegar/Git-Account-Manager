@@ -36,7 +36,8 @@
       "dmg"
     ],
     "icon": [
-      "icons/app-icon.png"
+      "icons/app-icon.png",
+      "icons/icon.ico"
     ],
     "windows": {
       "wix": {
