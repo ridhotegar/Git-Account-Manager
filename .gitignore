@@ -1,48 +1,53 @@
-# Dependencies
+# ── Dependencies ──────────────────────────────────
 node_modules/
 .pnpm-store/
+.pnpm/
 
-# Build output
+# ── Build output ──────────────────────────────────
 dist/
+build/
 src-tauri/target/
 
-# Environment
+# ── Environment ───────────────────────────────────
 .env
 .env.local
 .env.*.local
 
-# IDE
+# ── IDE & Editors ─────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.orig
 
-# OS
+# ── OS files ──────────────────────────────────────
 .DS_Store
 Thumbs.db
+Desktop.ini
+nul
 
-# Logs
+# ── Logs ──────────────────────────────────────────
 *.log
 logs/
 
-# Tauri
+# ── Tauri ─────────────────────────────────────────
 src-tauri/gen/
 
-# Vite
+# ── Vite ──────────────────────────────────────────
 .vite/
 
-# TypeScript build info
+# ── TypeScript ────────────────────────────────────
 *.tsbuildinfo
 
-# Downloaded build dependencies
+# ── Downloaded build dependencies ─────────────────
 *.zip
 *.7z
+*.rar
+*.tar.gz
 mingw64/
 
-# Executables (except scripts)
+# ── Executables (except build scripts) ────────────
 *.exe
+*.dll
 !scripts/*.cmd
-
-# System files
-nul
