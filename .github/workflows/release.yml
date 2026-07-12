@@ -12,12 +12,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform:
-          - ubuntu-22.04
-          - windows-latest
-          - macos-latest
+        include:
+          - os: ubuntu-22.04
+            target: linux
+          - os: windows-latest
+            target: windows
+          - os: macos-latest
+            target: macos
 
-    runs-on: ${{ matrix.platform }}
+    runs-on: ${{ matrix.os }}
 
     steps:
       - uses: actions/checkout@v4
@@ -32,11 +35,30 @@ jobs:
         with:
           version: latest
 
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
 
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            src-tauri/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('src-tauri/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
       - name: Install Linux dependencies
-        if: runner.os == 'Linux'
+        if: matrix.target == 'linux'
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -75,20 +97,40 @@ jobs:
         with:
           version: latest
 
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: windows-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            windows-pnpm-
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            src-tauri/target
+          key: windows-cargo-${{ hashFiles('src-tauri/Cargo.lock') }}
+          restore-keys: |
+            windows-cargo-
 
       - name: Install frontend dependencies
         run: pnpm install
 
       - name: Build portable
-        uses: tauri-apps/tauri-action@v1
+        run: pnpm tauri build -- --features portable
+
+      - name: Upload portable binary
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: src-tauri/target/release/git-account-manager.exe
+          name: Git-Account-Manager_Portable_${{ github.ref_name }}.exe
+          draft: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tagName: v__VERSION__
-          releaseName: v__VERSION__
-          releaseBody: ''
-          releaseDraft: true
-          prerelease: false
-          args: --features portable
