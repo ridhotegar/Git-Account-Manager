@@ -51,3 +51,10 @@ mingw64/
 *.exe
 *.dll
 !scripts/*.cmd
+
+# ── Generated mobile icons (desktop app only) ─────
+src-tauri/icons/Square*.png
+src-tauri/icons/StoreLogo.png
+src-tauri/icons/icon.png
+src-tauri/icons/android/
+src-tauri/icons/ios/
