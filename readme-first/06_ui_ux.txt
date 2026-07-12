@@ -1,0 +1,67 @@
+Design Philosophy
+
+Minimal.
+
+Modern.
+
+Professional.
+
+Inspired by
+
+Docker Desktop
+
+GitHub Desktop
+
+Raycast
+
+Arc Browser
+
+Spacing
+
+Large
+
+Clean
+
+Rounded corners
+
+No unnecessary decorations.
+
+No skeuomorphism.
+
+Animations
+
+Fast
+
+Subtle
+
+Native feeling
+
+Icons
+
+Lucide
+
+Typography
+
+Inter
+
+Responsive
+
+Support
+
+100%
+
+125%
+
+150%
+
+200%
+
+Windows scaling
+
+Accessibility
+
+Keyboard shortcuts
+
+Screen reader friendly
+
+High contrast support

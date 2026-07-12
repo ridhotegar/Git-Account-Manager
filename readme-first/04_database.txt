@@ -1,0 +1,57 @@
+Database
+
+SQLite
+
+Tables
+
+accounts
+
+repositories
+
+ssh_keys
+
+settings
+
+providers
+
+activity_logs
+
+Each account contains
+
+id
+
+provider
+
+display_name
+
+username
+
+email
+
+avatar_url
+
+token_reference
+
+ssh_key_reference
+
+is_active
+
+created_at
+
+updated_at
+
+Repositories
+
+path
+
+remote_url
+
+current_account
+
+last_opened
+
+Never store OAuth tokens in SQLite.
+
+Only store references.
+
+Secrets must be stored in native OS secure storage.

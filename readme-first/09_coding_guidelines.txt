@@ -1,0 +1,31 @@
+Coding Guidelines
+
+Write clean code.
+
+Follow SOLID.
+
+Follow Clean Architecture.
+
+Avoid code duplication.
+
+Prefer composition.
+
+Use descriptive naming.
+
+Every public function must have documentation.
+
+Write unit tests.
+
+Use Rust error handling properly.
+
+Never unwrap() unless impossible to fail.
+
+Prefer Result.
+
+Avoid panic.
+
+Prefer async where appropriate.
+
+Code should be easy to maintain.
+
+Optimize for readability before optimization.

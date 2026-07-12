@@ -1,0 +1,53 @@
+Frontend Requirements
+
+React
+
+TypeScript
+
+shadcn/ui
+
+TailwindCSS
+
+TanStack Query
+
+Zustand
+
+React Router
+
+Pages
+
+Dashboard
+
+Accounts
+
+Repositories
+
+SSH Keys
+
+Settings
+
+About
+
+Theme
+
+Dark
+
+Light
+
+System
+
+Rules
+
+Never duplicate backend logic.
+
+Frontend only renders data.
+
+Never call Git directly.
+
+Always call Rust commands.
+
+Use reusable components.
+
+Avoid large pages.
+
+Prefer composition over inheritance.

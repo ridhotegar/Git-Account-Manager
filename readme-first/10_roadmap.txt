@@ -1,0 +1,97 @@
+Phase 1
+
+Project setup
+
+Tauri
+
+React
+
+SQLite
+
+Theme
+
+Navigation
+
+--------------------------------
+
+Phase 2
+
+Account Management
+
+CRUD Account
+
+Avatar
+
+Settings
+
+--------------------------------
+
+Phase 3
+
+Git Engine
+
+Git Detection
+
+Git Config
+
+Git CLI
+
+--------------------------------
+
+Phase 4
+
+Credential Manager
+
+Windows
+
+Linux
+
+macOS
+
+--------------------------------
+
+Phase 5
+
+OAuth
+
+GitHub Login
+
+Logout
+
+Refresh Token
+
+--------------------------------
+
+Phase 6
+
+SSH
+
+Generate Key
+
+Import Key
+
+Upload Public Key
+
+--------------------------------
+
+Phase 7
+
+Repository Management
+
+Scan Repository
+
+Detect Account
+
+Clone
+
+--------------------------------
+
+Phase 8
+
+Packaging
+
+Windows
+
+Linux
+
+macOS
