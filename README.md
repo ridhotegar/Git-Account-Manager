@@ -150,20 +150,6 @@ git-account-manager/
 ├── package.json
 └── README.md
 ```
-
-## 🗺️ Roadmap
-
-- ✅ **Phase 1** — Project scaffold, Tauri + React integration
-- ✅ **Phase 2** — Account CRUD, Git identity switching
-- ✅ **Phase 3** — Repository tracking with git status
-- ✅ **Phase 4** — Credential management (OS keyring)
-- ✅ **Phase 5** — GitHub token verification
-- 🔲 **Phase 6** — GitHub OAuth (Device Flow)
-- 🔲 **Phase 7** — SSH key generation & management
-- 🔲 **Phase 8** — Repository cloning from remote
-- 🔲 **Phase 9** — Per-repo account configuration
-- 🔲 **Phase 10** — Cross-platform packaging (MSI, DMG, AppImage)
-
 ## 🤝 How to Use
 
 ### Adding a GitHub Account
