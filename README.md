@@ -62,8 +62,8 @@ sudo apt install libwebkit2gtk-4.1-dev libgtk-3-dev libayatana-appindicator3-dev
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/git-account-manager.git
-cd git-account-manager
+git clone https://github.com/ridhotegar/Git-Account-Manager.git
+cd Git-Account-Manager
 
 # 2. Install frontend dependencies
 pnpm install
@@ -75,15 +75,36 @@ pnpm tauri:dev
 pnpm tauri:build
 ```
 
-The built installer/executable will be in `src-tauri/target/release/bundle/`.
+The built packages will be in `src-tauri/target/release/bundle/`.
 
-### Portable build (no installer)
+## 📦 Download
 
+Pre-built binaries are available on the [Releases page](https://github.com/ridhotegar/Git-Account-Manager/releases).
+
+| Platform | Format | When to use |
+|----------|--------|-------------|
+| **Windows** | `.msi` | Standard installer — recommended |
+| **Windows** | `.exe` (portable) | Run from USB, no install needed |
+| **Linux** | `.AppImage` | Run on any distro, no install needed |
+| **macOS** | `.dmg` | Standard macOS app |
+
+## 🏗️ Build from Source
+
+### Build all platforms (current OS only)
 ```bash
-cargo tauri build --features portable
+pnpm tauri:build
 ```
 
-This produces a standalone executable. The "Start on Boot" setting is hidden in this mode.
+### Platform-specific builds
+```bash
+pnpm tauri:build:win         # Windows MSI installer
+pnpm tauri:build:portable    # Windows portable .exe (no installer)
+pnpm tauri:build:linux       # Linux AppImage
+pnpm tauri:build:mac         # macOS DMG
+```
+
+> **Note:** Cross-compilation requires the appropriate toolchain for each target.
+> The easiest way to build for all platforms is to use GitHub Actions CI.
 
 ## 📁 Project Structure
 

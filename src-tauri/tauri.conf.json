@@ -30,12 +30,18 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all",
+    "targets": [
+      "msi",
+      "appimage",
+      "dmg"
+    ],
     "icon": [
       "icons/app-icon.png"
     ],
     "windows": {
-      "wix": null,
+      "wix": {
+        "language": "en-US"
+      },
       "nsis": null
     },
     "macOS": {
