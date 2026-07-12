@@ -125,12 +125,17 @@ jobs:
       - name: Build portable
         run: pnpm tauri build -- --features portable
 
+      - name: Rename portable binary
+        shell: bash
+        run: |
+          mv src-tauri/target/release/git-account-manager.exe \
+             Git-Account-Manager_Portable_${{ github.ref_name }}.exe
+
       - name: Upload portable binary
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref_name }}
-          files: src-tauri/target/release/git-account-manager.exe
-          name: Git-Account-Manager_Portable_${{ github.ref_name }}.exe
+          files: Git-Account-Manager_Portable_${{ github.ref_name }}.exe
           draft: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
