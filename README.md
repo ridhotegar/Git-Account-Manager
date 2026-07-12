@@ -12,6 +12,14 @@ Switch between Git accounts, manage credentials, and keep your Git workflows org
 
 ---
 
+## 🖼️ Preview
+
+| Dashboard | Accounts | Settings |
+|-----------|----------|----------|
+| <img src="assets/app-preview-dashboard.png" alt="Dashboard" width="300"/> | <img src="assets/app-preview-accounts.png" alt="Accounts" width="300"/> | <img src="assets/app-preview-settings.png" alt="Settings" width="300"/> |
+
+---
+
 ## ✨ Features
 
 - **🔐 Account Management** — Add GitHub, GitLab, Bitbucket, or custom Git accounts with personal access tokens. Tokens are stored securely in your OS credential manager.
