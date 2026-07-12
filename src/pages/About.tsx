@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
+import appIcon from "@/assets/app-icon.png";
 
 const techStack = [
   { name: "Rust", description: "Backend runtime" },
@@ -24,9 +25,11 @@ export function About() {
     <div className="space-y-6 max-w-2xl">
       {/* Header */}
       <div className="text-center py-8">
-        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-foreground text-2xl font-bold mb-4">
-          G
-        </div>
+        <img
+          src={appIcon}
+          alt="Git Account Manager"
+          className="mx-auto h-16 w-16 rounded-2xl object-cover mb-4"
+        />
         <h2 className="text-2xl font-bold tracking-tight">
           Git Account Manager
         </h2>

@@ -7,6 +7,7 @@ import {
   Info,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import appIcon from "@/assets/app-icon.png";
 
 const navItems = [
   { to: "/", icon: LayoutDashboard, label: "Dashboard", end: true },
@@ -21,9 +22,11 @@ export function Sidebar() {
     <aside className="flex h-full w-56 flex-col border-r border-sidebar-border bg-sidebar">
       {/* Logo */}
       <div className="flex h-14 items-center gap-3 border-b border-sidebar-border px-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-bold">
-          G
-        </div>
+        <img
+          src={appIcon}
+          alt="Git Account Manager"
+          className="h-8 w-8 rounded-lg object-cover"
+        />
         <div className="flex flex-col">
           <span className="text-sm font-semibold text-sidebar-foreground">
             Git Account
